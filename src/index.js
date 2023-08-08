@@ -7,6 +7,9 @@ const port = 3000;
 
 const __filename = fileURLToPath(import.meta.url);
 
+// tạo trang tĩnh , set default về public
+app.use(express.static("src/public"));
+
 // template engine
 app.engine(
   "handlebars",
@@ -15,6 +18,7 @@ app.engine(
   })
 );
 app.set("view engine", "handlebars");
+
 // đang dùng view default ở ngoài của express, cần custom thêm
 // console.log(__filename);
 // app.set("views", path.join(__filename, "view"));
