@@ -26,7 +26,10 @@ app.set("view engine", "handlebars");
 app.get("/", (req, res) => {
   res.render("home", { title: "not done yet" });
 });
-
+app.get("/search", (req, res) => {
+  // will use query params later
+  res.render("search", { title: "not done yet" });
+});
 app.get("/kill-me", (req, res) => {
   res.render("partials/kill-me", { title: "plz K me ( ._.)" });
 });
