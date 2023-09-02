@@ -34,6 +34,11 @@ app.get("/kill-me", (req, res) => {
   res.render("partials/kill-me", { title: "plz K me ( ._.)" });
 });
 
+// nếu dùng POST -> định nghĩa route dùng post
+// app.post("/search", (req, res) => {
+//   res.render("search", { title: "not done yet" });
+// });
+
 app.listen(port, () => {
   console.log(`Example app listening on port ${port}`);
 });
